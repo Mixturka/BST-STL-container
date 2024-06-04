@@ -14,7 +14,7 @@ This project implements STL-compatible container for a Binary Search Tree, provi
 
 ## Testing
 
-The project includes a comprehensive test suite using the Google Test framework to ensure that all requirements are met. The tests are an integral part of the assignment, and their coverage will affect the final grade.
+The project includes a test suite using the Google Test framework to ensure tree is working correctly.
 
 ## Constraints
 
