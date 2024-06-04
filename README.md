@@ -6,13 +6,9 @@ This project implements STL-compatible container for a Binary Search Tree, provi
 
 ## Features
 
-
-- **Template-based Containers**: Parameterized by the type of stored objects, comparison operator, and allocator.
-- **Associative Containers**: Elements are referenced by their key and sorted based on the comparison operator.
-
-- **Reverse Iterators**: Support for iterating through the container in reverse order.
-- **Allocator Awareness**: Containers support custom allocators for memory management.
-
+- **Associative Containers**
+- **Reverse Iterators**:
+- **Allocator Awareness**
 - **Bidirectional Iterators**: Iterators can move in both directions, forward and backward.
 - **Traversal via Iterators**: The `++` operator moves the iterator to the next element according to the traversal rule.
 
