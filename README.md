@@ -6,11 +6,11 @@ This project implements STL-compatible container for a Binary Search Tree, provi
 
 ## Features
 
-- **Associative Containers**
-- **Reverse Iterators**:
+- **Associative Container**
+- **Reverse Iterator**
 - **Allocator Awareness**
-- **Bidirectional Iterators**: Iterators can move in both directions, forward and backward.
-- **Traversal via Iterators**: The `++` operator moves the iterator to the next element according to the traversal rule.
+- **Bidirectional Iterator**
+- **Traversal via Iterators**
 
 ## Testing
 
