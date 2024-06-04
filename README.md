@@ -16,16 +16,6 @@ This project implements STL-compatible container for a Binary Search Tree, provi
 
 The project includes a test suite using the Google Test framework to ensure tree is working correctly.
 
-## Constraints
-
-
-- **No Standard Containers**: The use of standard containers is prohibited.
-
-## Implementation Notes
-
-
-- **Tag Dispatch Idiom**: Consider using this idiom to avoid implementing three separate containers and to efficiently manage the different traversal types.
-
 ## Usage
 
 To use the containers, include the appropriate header files and instantiate the containers with the desired template parameters. Use the iterators provided by each container to traverse the tree in the specified order.
@@ -33,23 +23,15 @@ To use the containers, include the appropriate header files and instantiate the 
 ## Example
 
 ```cpp
-#include "BinarySearchTree.h"
-
-int main() {
-    // Example usage of the Binary Search Tree containers
-    // Assuming InOrderBinarySearchTree, PreOrderBinarySearchTree, and PostOrderBinarySearchTree are implemented
-    InOrderBinarySearchTree<int> inOrderTree;
-    PreOrderBinarySearchTree<int> preOrderTree;
-    PostOrderBinarySearchTree<int> postOrderTree;
-
-    // Insert elements into the trees
-    // ...
-
-    // Traverse the trees using iterators
-    for (auto it = inOrderTree.begin(); it != inOrderTree.end(); ++it) {
-        // Process element pointed by it
-    }
-    // Similarly for preOrderTree and postOrderTree
-
-    return 0;
-}
+  BST<int> bst;
+  auto tree = bst.emplace<IteratorType::INORDER>(5, 4, 1, 7, 2, 8, 6);
+  BST<int> bst2;
+  bst2.emplace<IteratorType::INORDER>(1, 2, 3);
+  bst.merge(bst2);
+  for (auto it = bst.begin<IteratorType::INORDER>();
+       it != bst.end<IteratorType::INORDER>(); ++it) {
+    std::cout << *it << ' ';
+  }
+  
+  return 0;
+```
